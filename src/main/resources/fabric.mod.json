@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "viencous",
+	"version": "${version}",
+	"name": "VC Mod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"HyFabi"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/viencous/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+		  "at.hyfabi.VienCousMod"
+		],
+		"client": [
+			"at.hyfabi.VienCousModClient"
+		],
+		"fabric-datagen": [
+		  "at.hyfabi.datagen.ModDataGeneration"
+		]
+	},
+	"mixins": [
+		"viencous.mixins.json",
+		{
+			"config": "viencous.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": "~1.19.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
